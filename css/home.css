@@ -1,9 +1,82 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
 
 
-:root{
+body{
     font-family: 'Roboto', sans-serif;
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
 }
+*:focus {
+    outline: none;
+}
+
+
+
+/* HEADER */
+
+
+  #header{
+      margin:auto;
+      position: relative;
+  }
+
+
+  #logoImg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 12vw;
+
+  }
+
+  nav{
+      text-align: center;
+      padding-top: 2vh;
+      white-space: nowrap;
+    
+  }
+
+
+
+  nav ul li{
+      display: inline-block;
+      text-align: center;
+      margin-left: 8vw;
+      margin-right: 8vw;
+      white-space: nowrap;
+      
+  }
+
+
+  nav ul li a{
+color: black;
+font-weight: 500;
+white-space: nowrap;
+padding-left: 0;
+  }
+
+  nav ul li a:hover{
+    color: gainsboro;
+    text-decoration: none;
+}
+
+#shoppingCart{
+    position:absolute;
+    right:1vw;
+    font-size: 1.5vw;
+    top:1vh;
+    color: black;
+}
+
+#shoppingCart span{
+    font-size: 1vw;
+}
+
+/* END HEADER */
+
+
+/* CAROUSEL */
 
 .carousel-inner img {
     width: 100%;
@@ -14,9 +87,9 @@
 #carouselMain{
     position: absolute;
     top: 25vh;
-    left: 10vw;
-    width: 80vw;
-    max-height: 40vh;
+    left: 20vw;
+    width: 60vw;
+    max-height: 60vh;
 }
 
 .carousel-inner{
@@ -25,6 +98,7 @@
 .carousel-indicators{
     position: absolute;
     bottom: 0;
+    right: 0vw;
 }
 
 .carousel-indicators li {
@@ -37,13 +111,113 @@
     background-color: transparent;
   }
 
-  #header{
-      margin:auto;
-  }
 
-  #logoImg{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 12vw;
-  }
+  /* END CAROUSEL */
+
+
+.underline80{
+    position: absolute;
+    left: 10vw;
+    width: 80vw;
+    border-bottom: solid 1px black;
+}
+
+
+
+
+
+/* FOOTER */
+
+#footer{
+    margin-top: 20vh;
+    padding-top: 1vh;
+    position: absolute;
+    width: 100vw;
+    height: 20vh;
+    top: 80vh;
+    background-color: rgba(220, 220, 220, 0.137);
+}
+
+
+#newsletterWrapper{
+    color: gray;
+    position: absolute;
+    right: 1vw;
+    top: 3vh;
+}
+#newsletterWrapper a, #newsletterWrapper input{
+    display: inline-block;
+}
+
+#newsletterWrapper a{
+color: gray;
+border: solid 1px gray;
+font-size: 10px;
+}
+#newsletterWrapper a:hover{
+text-decoration: none;
+background-color: white;
+color: rgba(0, 0, 0, 0.151);
+}
+
+
+#newsletterWrapper input{
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 1px gray;
+    
+}
+
+#result{
+    font-size: 12px;
+    color: gray;
+}
+
+
+.footerBlock{
+    display: inline-block;
+    color: gray;
+    margin-left: 10vw;
+}
+
+.footerBlock p{
+color: black;
+}
+.footerBlock a{
+    display:block;
+    color: gray;
+}
+
+
+/* END FOOTER */
+
+
+/* MOBILE BELOW */
+
+
+@media screen and (max-width: 760px) {
+
+    .noMobile{
+      display:none;
+    }
+
+    #logoImg{
+        width: 25vw;
+        margin-bottom: 5vh;
+    }
+    #shoppingCart{
+        font-size: 4vw;
+    }
+
+    #footer{
+        top: 60vh;
+    }
+
+    nav{
+        font-size: 2.5vw;
+    }
+    nav ul{
+        padding:0;
+    }
+
+}
