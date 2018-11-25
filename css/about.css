@@ -1,0 +1,16 @@
+#imagesAbout{
+position: relative;
+    width: 40vw;
+    height: 50vh;
+}
+
+#imagesAboutWrapper{
+    position: absolute;
+    top: 15vh;
+    right: 10vw;
+}
+
+.random{
+    position: absolute;
+    width: 12vw;
+}

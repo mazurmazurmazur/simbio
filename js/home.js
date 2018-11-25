@@ -26,18 +26,20 @@ $(document).ready(function() {
 
 ///////VALIDATION IF EMAIL ADDRESS IS CORRECT PLUS INFO TO USER
     function validateEmail(email) {
-        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(String(email).toLowerCase());
     }
     
     function validate() {
-        var $result = $("#result");
-        var email = $("#email").val();
+        let $result = $("#result");
+        let email = $("#email").val();
+        let form = $('form#newsletter-form');
         $result.text("");
       
         if (validateEmail(email)) {
         sendToSheet();
           $result.text("Thank you for subscribing!");
+          form.closest('form').find("input[type=email], textarea").val("");
         } else {
           $result.text(email + " is not valid email.");
         }
@@ -65,6 +67,7 @@ $(document).ready(function() {
     method: "GET",
     dataType: "json",
     data: $form.serializeObject()
+    
   });
 }
 

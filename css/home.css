@@ -119,7 +119,7 @@ padding-left: 0;
     position: absolute;
     left: 10vw;
     width: 80vw;
-    border-bottom: solid 1px black;
+    border-bottom: solid 1px rgb(219, 219, 219);
 }
 
 
@@ -154,8 +154,13 @@ color: gray;
 border: solid 1px gray;
 font-size: 10px;
 }
+
 #newsletterWrapper a:hover{
-text-decoration: none;
+    text-decoration: none;
+}
+
+
+#newsletterWrapper a span:hover{
 background-color: white;
 color: rgba(0, 0, 0, 0.151);
 }
@@ -202,15 +207,11 @@ color: black;
     }
 
     #logoImg{
-        width: 25vw;
-        margin-bottom: 5vh;
+        width: 35vw;
+        margin-bottom: 2vh;
     }
     #shoppingCart{
         font-size: 4vw;
-    }
-
-    #footer{
-        top: 60vh;
     }
 
     nav{
@@ -219,5 +220,56 @@ color: black;
     nav ul{
         padding:0;
     }
+
+    .carousel-indicators{
+        top:0;
+        right:0 !important;
+        padding:0;
+        margin: 0;
+        justify-content: inherit;
+    }
+
+    .carousel-inner{
+        height: 40vh;
+    }
+
+    #footer{
+        top: 60vh;
+        height: 70%;
+        text-align: center; 
+    }
+
+    #footer div{
+        position: static;
+        display: block;
+        margin:0;
+        margin-bottom: 5vh;
+        
+    }
+
+    #footerUnderline{
+        margin-left: 10vw !important;
+    }
+    #newsletterWrapper{
+        justify-content: center;
+        text-align: center;
+    }
+
+    #newsletterWrapper a, #newsletterWrapper input, #newsletterWrapper p{
+        display: block;
+        margin: auto;
+        text-align: center;
+    }
+    #newsletterWrapper a{
+        margin-top: 1vh;
+        border:none;
+    }
+    #newsletterWrapper a span{
+        font-size: 4vw;
+        margin-top: 1vh;
+        border:solid 1px gray;
+    }
+
+
 
 }
