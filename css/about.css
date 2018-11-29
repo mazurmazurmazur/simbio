@@ -1,3 +1,23 @@
+
+
+
+
+#textAbout{
+position: absolute;
+width: 30vw;
+top: 20vh;
+left: 10vw;
+height: 70vh;
+justify-content: left;
+font-size: 1.5vw;
+font-weight: 500;
+}
+
+
+
+
+
+
 #imagesAbout{
 position: relative;
     width: 40vw;
@@ -6,11 +26,47 @@ position: relative;
 
 #imagesAboutWrapper{
     position: absolute;
-    top: 15vh;
-    right: 10vw;
+    right: 15vw;
+    top: 20vh;
 }
 
 .random{
     position: absolute;
     width: 12vw;
 }
+
+/* MOBILE BELOW */
+
+
+@media screen and (max-width: 760px) {
+    #textAbout{
+        top: 28vh;
+        left: 5vw;
+        width: 50vw;
+        font-size: 3.5vw;
+        z-index: 1;
+    }
+
+    #imagesAboutWrapper{
+        right: 3vw;
+        top: 40vh;
+    }
+
+    #aboutImage{
+        
+        width: 50vw;
+        opacity: 0.6;
+    }
+
+}
+
+/* END OF MOBILE*/
+
+/* ONLY DESKTOP BELOW */
+
+@media screen and (min-width: 761px) {
+
+
+}
+
+/* END OF ONLY DESKTOP */

@@ -1,14 +1,37 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
 
 
-body{
+body,
+html {
     font-family: 'Roboto', sans-serif;
     margin:0;
     padding:0;
     overflow-x: hidden;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
 }
 *:focus {
     outline: none;
+}
+
+
+
+#bodyWrapper{
+ height: 100%;
+ overflow:auto;
+}
+
+#middleWrapper{
+  height: 100%;
+  overflow:auto;
+  position: relative;
+}
+
+.middleNoFooter{
+    top: 20vh;
+    width: 100vw;
+    overflow:auto;
 }
 
 
@@ -17,10 +40,23 @@ body{
 
 
   #header{
+      top:0;
       margin:auto;
+      position: fixed;
+      right:0;
+      left:0;
+      background-color: white;
+      z-index: 2;
+  }
+
+  #headerWrapper{
       position: relative;
   }
 
+  .activeButton{       /* marks on which subpage of the website are you */
+      
+    background-color: rgba(0, 0, 0, 0.075);
+}
 
   #logoImg{
     display: block;
@@ -129,13 +165,12 @@ padding-left: 0;
 /* FOOTER */
 
 #footer{
-    margin-top: 20vh;
     padding-top: 1vh;
     position: absolute;
-    width: 100vw;
+    width: 100%;
     height: 20vh;
-    top: 80vh;
     background-color: rgba(220, 220, 220, 0.137);
+    bottom: -20vh;
 }
 
 
@@ -180,6 +215,7 @@ color: rgba(0, 0, 0, 0.151);
 
 
 .footerBlock{
+    margin-top:2vh;
     display: inline-block;
     color: gray;
     margin-left: 10vw;
@@ -234,8 +270,8 @@ color: black;
     }
 
     #footer{
-        top: 60vh;
-        height: 70%;
+        bottom:-70vh;
+        height: 70vh;
         text-align: center; 
     }
 
@@ -273,3 +309,14 @@ color: black;
 
 
 }
+
+/* ONLY DESKTOP BELOW */
+
+@media screen and (min-width: 761px) {
+    .noDesktop{
+        display:none;
+    }
+    
+    }
+    
+    /* END OF ONLY DESKTOP */

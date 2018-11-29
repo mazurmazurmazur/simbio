@@ -16,25 +16,35 @@
     <script src="js/about.js"></script>
 </head>
 <body>
-        <div id="header">
+
+    <div id="bodyWrapper">
+        <div id="header"><div id="headerWrapper">
                 <a id="logo" href="index.html"><img id="logoImg" src="images/logo.png"></a>
                 <a id="shoppingCart" href="#">
                         <i class="fas fa-shopping-cart"></i><span class="noMobile">CART(0)</span>
                       </a>
                 <nav >
                     <ul>
-                        <li><a href="#">ABOUT</a></li>
-                        <li><a href="#">BLOG</a></li>
-                        <li><a href="#">SHOP</a></li>
-                        <li><a href="#">CONTACT</a></li>
+                        <li><a id="blogButton" href="blog.html">BLOG</a></li>
+                        <li><a id="aboutButton" class ="activeButton" href="about.html">ABOUT</a></li>
+                        <li><a id="shopButton" href="shop.html">SHOP</a></li>
+                        <li><a id="contactButton" href="contact.html">CONTACT</a></li>
                       </ul>
                     </nav>
                     <div class= "underline80" ></div>
             </div>
+        </div>
+        
+        <div id="middleWrapper">
+                <div class="middleNoFooter">
+            <div id="textAbout">
+                    
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ante diam, semper sit amet maximus sit amet, feugiat sit amet quam. Praesent finibus nunc in condimentum vestibulum. Maecenas semper porta libero, nec vestibulum nunc malesuada a. Aliquam ullamcorper est neque, sit amet consequat lorem gravida sit amet. <br><br>Phasellus non orci metus. Pellentesque a turpis sagittis velit auctor sollicitudin. Donec sed ligula nisl. Proin id fermentum libero. Nullam neque risus, facilisis tincidunt euismod at, lacinia quis nunc.
+            </div>
 
 
             <div id="imagesAboutWrapper">
-            <div id="imagesAbout">
+            <div id="imagesAbout" class="noMobile">
                 
                 <img class="random" src="images/book1.jpg">
                 <img class="random" src="images/book2.jpg">
@@ -46,11 +56,12 @@
                 <img class="random" src="images/chair1.jpg">
                 <img class="random" src="images/chair2.jpg">
             </div>
+            <div id="mobileImageAbout" class="noDesktop">
+                    <img id="aboutImage" src="images/lamp1.jpg">
+            </div>
             </div>
 
-
-
-
+        </div>
 
 
             <div id="footer">
@@ -79,6 +90,13 @@
                             <a href="#">RETURNS</a>
                     </div>
                </div>
+         
+        </div>
+  
 
 
+
+
+            </div>
+        </div>
     </body>

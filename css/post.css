@@ -1,0 +1,144 @@
+body,html{
+    margin:0;
+    padding:0;
+}
+
+#postTitle{
+    line-height: 30px;
+    font-size: 50px;
+    font-weight: 500;
+    width: 10vw;
+}
+
+#container{
+padding: 5vh;
+    margin-top: 15vh;
+    width: 100vw;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 40px;
+    color:black;
+     
+    
+}
+
+#postText{
+    
+ 
+}
+#floated{
+    float: left;
+    margin-right: -5vw;
+    width: 70vw;
+    height: 70vh;
+    overflow: hidden;
+    margin-bottom: -15vh;
+    margin-top: 10vh;
+}
+#floatedBelow{
+    margin-top: 15vh;
+    float: left;
+    margin-right: 5vw;
+    width: 50vw;
+    height: 50vh;
+    overflow: hidden;
+}
+
+#floatedTitle{
+    margin-right: -5vw;
+    float: left;
+    width: 70vw;
+    height: auto;
+    
+}
+
+#floated img{
+    width: inherit;
+}
+
+#toStoreButton{
+   top:0;
+   right:-10vh;
+    position: absolute;
+    margin-top: 3vh;
+    border-bottom: dotted 1px black;
+    line-height:15px;
+    font-size: 15px;
+    font-weight: 300;
+    color:black;
+}
+
+
+
+
+/* GALLERY BELOW MAIN PHOTO */
+
+/**
+ * Variables
+ */
+/**
+ * Base Styles
+ * 1. Improve box model
+ * 2. Enable fluid images
+ */
+ *,
+ *:before,
+ *:after {
+   box-sizing: border-box;
+   /* 1 */
+ }
+ 
+ 
+ img {
+   max-width: 100%;
+   /* 2 */
+ }
+ 
+ /**
+  * Container Styles
+  */
+ .container {
+   max-width: 30em;
+   margin: 0 auto;
+   padding: 1em;
+   position: relative;
+ }
+ 
+ /**
+  * Helper Styles
+  */
+ .ir {
+   text-indent: 100%;
+   white-space: nowrap;
+   overflow: hidden;
+ }
+ 
+ /**
+  * Gallery Styles
+  * 1. Enable fluid images
+  */
+ .gallery {
+   overflow: hidden;
+ }
+ 
+ .gallery__thumbs {
+   text-align: center;
+   background: #fff;
+ }
+ .gallery__thumbs a {
+   display: inline-block;
+   width: 20%;
+   padding: 0.5em;
+   opacity: 0.75;
+   transition: opacity 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+ }
+ .gallery__thumbs a:hover {
+   opacity: 1;
+ }
+ .gallery__thumbs a.is-active {
+   opacity: 0.2;
+ }
+
+ 
+
+ /* END OF GALLERY BELOW MAIN PHOTO */
