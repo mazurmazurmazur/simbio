@@ -142,3 +142,76 @@ padding: 5vh;
  
 
  /* END OF GALLERY BELOW MAIN PHOTO */
+
+
+ /* MOBILE BELOW */
+
+
+@media screen and (max-width: 760px) {
+
+
+  #postTitle{
+    line-height: 25px;
+    font-size: 40px;
+    font-weight: 500;
+    width: 80vw;
+}
+
+#container{
+    padding: 0;
+    margin: 0;
+    margin-top: 20vh;
+    width: 100vw;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 40px;
+    color:black;
+     
+    
+}
+#postText{
+  padding: 10vw;
+}
+
+#floated{
+    margin: 0;
+    padding:10vw;
+    width: 100vw;
+    height: auto;
+    overflow: hidden;
+    
+}
+#floatedBelow{
+    margin:0;
+    padding:0;
+    width: 100vw;
+    height: auto;
+    overflow: hidden;
+}
+
+#floatedTitle{
+    float: left;
+    width: 100vw;
+    height: auto;
+    padding-left: 10vw;
+}
+
+#floated img{
+    width: inherit;
+}
+
+#toStoreButton{
+   position: relative;
+   margin: 0;
+   margin-right: 20vw;
+   margin-top: 2vh;
+   margin-bottom: 5vh;
+    float:right;
+    border-bottom: dotted 1px black;
+    line-height:15px;
+    font-size: 15px;
+    font-weight: 300;
+    color:black;
+}
+
+}
