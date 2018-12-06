@@ -151,10 +151,10 @@ padding: 5vh;
 
 
   #postTitle{
-    line-height: 25px;
+    line-height: 45px;
     font-size: 40px;
     font-weight: 500;
-    width: 80vw;
+    width: 120vw;
 }
 
 #container{

@@ -1,0 +1,64 @@
+#overAllContainer{
+    text-align: center;
+    margin-top: 20vh;
+    }
+    
+    #containerShopItem{
+      position: relative;
+      width: auto;
+      display: inline;
+     
+      
+    }
+    
+    .itemBox {
+      margin: 5vw;
+      display: inline-block;
+        height: 25vh;
+        position:relative;
+        z-index: 3;
+        background-color: rgb(177, 173, 173);
+      background-size: 80%;
+    width: auto
+    }
+    
+    .whiteSquare{
+        color:white;
+        transition: 1s ease;
+        opacity: 0;
+        position: absolute;
+        left: 5%;
+        text-align:center;
+        top: 20%;
+        width: 90%;
+        max-height: 90%;
+        font-size: 0.7vw;
+        transform: translate(0px, 30px);}
+    
+    .itemBox:hover .whiteSquare{
+        opacity: 1;
+        transform: translate(0px, 0px);}
+    
+    .productClass{
+        z-index: 0;
+        transition: 1s ease;}
+    
+    .itemBox:hover .productClass{
+        opacity: 0.3;}
+    
+    .itemBox:hover .buttonText{
+        opacity: 1;
+        font-weight: 400;}
+    
+    .prodButton{
+        transition: .5s ease;
+        border: solid 1px;
+        margin: 1vw;
+        padding: 0.5vw;
+        text-decoration: none;
+        color: white;}
+    
+    .productClass{
+      width: inherit;
+      height: inherit;
+    }

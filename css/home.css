@@ -46,7 +46,7 @@ html {
       right:0;
       left:0;
       background-color: white;
-      z-index: 2;
+      z-index: 4;
   }
 
   #headerWrapper{
@@ -54,9 +54,8 @@ html {
   }
 
   .activeButton{       /* marks on which subpage of the website are you */
-      
-    background-color: rgba(0, 0, 0, 0.075);
-}
+      text-decoration: underline
+    }
 
   #logoImg{
     display: block;
