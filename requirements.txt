@@ -1,0 +1,11 @@
+User interface development 6/12 - 50%
+  everything dev
+User Experiences 2/12 - 17%
+  tests, user journeys, 
+Content production 2/12 - 17%
+  texts, video, tutorial, cropping images, logo
+Business 1/12 - 8.5%
+  business, SoMe strategy, competitor analysis, b model canvas
+Technology 1/12 - 8.5%
+  something new, maybe only to you, jQuery3 and bootstrap 4, GS
+  something you havn't been taught, something you figured out

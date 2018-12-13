@@ -39,4 +39,39 @@ $(document).ready(function() {
 
         });
     } 
+
+
+    let name= document.getElementById("name");
+    let emailAddress = document.getElementById("email");
+    let subject = document.getElementById("subject");
+    let message = document.getElementById("message");
+
+document.getElementById("sendEmail").addEventListener("click", function(){
+
+    Email.send({
+        Host : "smtp.gmail.com",
+        Username : "mailsimbio@gmail.com",
+        Password : ",S<~-g3r#aG]45ev",
+        To : 'mailsimbio@gmail.com',
+        From : "mailsimbio@gmail.com",
+        Subject : "SIMBIO: "+ subject.value,
+        Body : "Interestants name: " + name.value +"<br>"+
+        "Message : <br>" + message.value +
+        "<br>Answer to: " + emailAddress.value
+        }).then(
+      message => console.log(message)
+    ).then(
+            document.getElementById("sentEmail").innerHTML = "Message sent!"
+
+
+    );
+        name.value="";
+        emailAddress.value="";      ///clearing up all text fields in email form after sending email
+        subject.value="";
+        message.value="";
+     
+})
+
+
+
 });
