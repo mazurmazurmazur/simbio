@@ -19,6 +19,22 @@ $.fn.serializeObject = function()
 
 
 
+function updateCart(cart){              //function called to update amount of all items in cart
+
+    if(localStorage.length > 0){
+        let sum = 0;
+        for (let i=0, leng=localStorage.length; i<leng; i++){
+            let key = localStorage.key(i); 
+            let val = localStorage.getItem(key);
+            let valAll = val.split("*");
+            sum += parseInt(valAll[0]);
+            cart.innerHTML = sum;
+        }
+    }
+    }
+
+
+
 
 $(document).ready(function() {
     jQuery.fn.carousel.Constructor.TRANSITION_DURATION = 2000  // 2 seconds is how long the slide switch takes in carousel
@@ -75,7 +91,17 @@ $(document).ready(function() {
 
 
 
-  });
 
+
+let cartState = document.querySelector(".totalInCart");
+
+updateCart(cartState);  //global cart update
+
+
+
+
+
+
+  });
 
 
