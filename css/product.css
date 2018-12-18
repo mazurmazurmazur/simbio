@@ -23,6 +23,7 @@
   }
   
   .product{
+    margin-top: 15vh;
     background-color: white;
     border-bottom: 1px solid #ddd;
     clear: both;
@@ -82,11 +83,10 @@
   }
   
   .product-info .select-dropdown{
-    display: inline-block;
     margin-right: 10px;
     position: relative;
     width: auto;
-    float: left;
+    display: inline-block;
   }
   
   .product-info select{
@@ -181,4 +181,23 @@
   
   .product-info a.share-link:hover{
     border-bottom: 2px solid #aaa;
+  }
+
+  .select-color{
+    height: 20px;
+    width: 100px;
+
+    margin-right: 10px;
+    position: relative;
+    width: auto;
+    
+  }
+
+  .color {
+    height: 20px;
+    width: 20px;
+    margin: 1px;
+    display: inline-block;
+    border: 1px solid gray;
+    cursor: pointer;
   }

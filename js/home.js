@@ -28,7 +28,10 @@ function updateCart(cart){              //function called to update amount of al
             let val = localStorage.getItem(key);
             let valAll = val.split("*");
             sum += parseInt(valAll[0]);
-            cart.innerHTML = sum;
+            if(isNaN(sum)){
+            cart.innerHTML = "0";}
+            else{
+            cart.innerHTML = sum;}
         }
     }
     }
