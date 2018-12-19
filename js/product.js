@@ -42,15 +42,7 @@ function getAllProducts() {
 
 
 
-  function checkColor(colorName){
-    let indicator = document.querySelector(".indicator")
-    let newDiv = document.createElement("div");
-    newDiv.id=key;
-    newDiv.className="dot";
-    newDiv.style.background= acf[key];
-    indicator.appendChild(newDiv);
-    
-  }
+  
 
 
   function showProducts(json) {
@@ -90,7 +82,7 @@ function getAllProducts() {
         let titleTag = document.querySelector(".productName");
   
         
-         let photo = json.acf.img.sizes.medium_large;
+         let photo = json.acf.img1color1.sizes.medium_large;
         let price = json.acf.price;
         let title = json.title.rendered;
         //  let dataId = json.id;
@@ -102,6 +94,52 @@ function getAllProducts() {
            priceTag.innerHTML = price;
               titleTag.innerHTML = title;
   
+
+
+
+
+
+
+              /////color selector
+$(".color").on("click", function(){
+    $(".color").css("border", "1px solid gray");
+    $(this).css("border", "2px solid black");
+    checkColor($(this).attr("id"));
+})
+
+
+function setMainImage(url){
+    image.style.opacity = 0;
+    image.style.backgroundImage= "url("+ url + ")";
+    image.style.opacity = 1;
+}
+
+
+function checkColor(colorName){
+    let indicator = document.querySelector(".indicator");
+    indicator.innerHTML="";
+    for( key in acf){
+        if(key.startsWith("img") && key.endsWith(colorName) && acf[key]!=false){
+
+            let newDiv = document.createElement("div");
+            let currentImage = acf[key].sizes.medium_large;
+            newDiv.id=key;
+            newDiv.className="dot";
+            
+            newDiv.addEventListener("click", function(){setMainImage(currentImage)})
+            indicator.appendChild(newDiv);
+            if(key.startsWith("img1")){
+                setMainImage(acf[key].sizes.medium_large);
+            }
+            
+
+
+}
+
+}
+  }
+
+  checkColor("color1");
               
   
      
@@ -113,7 +151,7 @@ function getAllProducts() {
 
 
 
-  function afterFetch(){
+  function afterFetch(json){
 
 
 
@@ -126,13 +164,15 @@ let cartState = document.querySelector(".totalInCart");
 
 addButton.addEventListener("click", function(event){
 event.preventDefault();
-console.log("clicked");
 
+let e = document.querySelector(".selectQuantity");
+ let strUser = e.options[e.selectedIndex].text;         ///amount selected in option
+console.log( e.options[e.selectedIndex].text);
     if (localStorage[productName]){      //increasing amount of selected product in cart
-        localStorage[productName] = Number(localStorage[productName]) + 1;
+        localStorage[productName] = Number(localStorage[productName]) + Number(strUser); //increasing by amount selected in select-dropdown
         }
         else{
-            localStorage[productName] = "1";
+            localStorage[productName] = strUser;
         }
 updateCart(cartState);  ///dynamic cart update after click, calls global function in home.js
 
@@ -145,11 +185,7 @@ updateCart(cartState);  ///dynamic cart update after click, calls global functio
 
 
 
-/////color selector
-$(".color").on("click", function(){
-    $(".color").css("border", "1px solid gray");
-    $(this).css("border", "2px solid black");
-})
+
 
 
 

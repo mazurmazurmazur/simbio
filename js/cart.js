@@ -11,36 +11,29 @@ Number.prototype.to_$ = function () {
 };
 String.prototype.strip$ = function () {
   return this.split("$")[1];
+
 };
+
+function getAllProducts() {
+
+  
+
+  fetch("http://mazurmazurmazur.pl/simbiocms/?rest_route=/wp/v2/product&per_page=100")
+    .then(res => res.json())
+    .then(showProducts)
+    .then(startCart)
+    
+    
+}
+
+
+
 
 var app = {
 
   shipping : 5.00,
   products : [
-      {
-        "name" : "Meet and greet with Bill Murray",
-        "price" : "19.95",
-        "img" : "http://fillmurray.com/g/159/159",
-        "desc" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-      },
-      {
-        "name" : "Tap Water",
-        "price" : "0.99",
-        "img" : "http://shechive.files.wordpress.com/2011/08/odd-products-28.jpg?w=159&h=159",
-        "desc" : "You decide",
-      },
-      {
-        "name" : "Social Shower Curtain",
-        "price" : "40.00",
-        "img" : "http://media-cache-ec2.pinimg.com/550x/c7/02/8f/c7028f260ae030ba66494ee75407192f.jpg",
-        "desc" : "Always stay up-to-date with this very useless shower curtain!"
-      },
-      {
-        "name" : "Self stirring mug",
-        "img" : "https://i.dailymail.co.uk/i/pix/2012/09/16/article-2204256-15053801000005DC-304_634x524.jpg",
-        "price" : "12.35",
-        "desc" : "Don't get tired!"
-      }
+    
     ],
 
   removeProduct: function () {
@@ -148,6 +141,37 @@ var app = {
 
 };
 
-app.renderTemplates();
+function showProducts(json) {
+  console.log(json);
+  for(let i =0; i< localStorage.length; i++){
+    let productId = localStorage.key(i).split("id").pop(); // split and pop is for removing "id" from id number, the string was necessary to sustain the functionality of localstorage
+   let productQuantity = localStorage[localStorage.key(i)];
+    json.forEach(function(theProduct){
+      if(theProduct.id == productId)
+          app.products.push({
+          "name":theProduct.title.rendered,
+          "price":theProduct.acf.price,
+          "img":theProduct.acf.img1color1.sizes.medium_large,
+          "desc":(theProduct.acf.desc).split('.')[0], ///only the first sentence from description
+           "quantity": productQuantity,
+           "prod-total": productQuantity*(theProduct.acf.price)
+        
+        });
+       
+          
+    })
+  }
+  
+  
+}
+
+
+getAllProducts();
+
+function startCart(){
+  app.renderTemplates();
 app.setProductImages();
 app.attachEvents();
+
+}
+

@@ -44,11 +44,11 @@
   }
   
   .product-image .bg{
-    background-image: url('https://cdn.shopify.com/s/files/1/0199/4554/products/fncwdmain_1024x1024.png?v=1428681549');
     background-size: cover;
     background-position: center top;
     width: 100%;
     min-height: 450px;
+    transition: 1s;
   }
   
   .product-image .indicator{

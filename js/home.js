@@ -40,6 +40,9 @@ function updateCart(cart){              //function called to update amount of al
 
 
 $(document).ready(function() {
+
+    document.getElementById("shoppingCart").href = "cart.html";
+
     jQuery.fn.carousel.Constructor.TRANSITION_DURATION = 2000  // 2 seconds is how long the slide switch takes in carousel
 
 

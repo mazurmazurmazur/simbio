@@ -25,7 +25,7 @@ function getAllProducts() {
         let detailsButton = clone.querySelector(".detailButton");
   
         
-         let photo = theProduct.acf.img.sizes.medium_large;
+         let photo = theProduct.acf.img1color1.sizes.medium_large;
         let price = theProduct.acf.price;
         let title = theProduct.title.rendered;
          let dataId = theProduct.id;
