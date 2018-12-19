@@ -245,9 +245,11 @@ color: black;
         width: 35vw;
         margin-bottom: 2vh;
     }
-    #shoppingCart{
+    #shoppingCart, #shoppingCart span{
         font-size: 4vw;
     }
+
+
 
     nav{
         font-size: 2.5vw;

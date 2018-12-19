@@ -34,21 +34,13 @@
         font-size: 0.7vw;
         transform: translate(0px, 30px);}
     
-    .itemBox:hover .whiteSquare{
-        opacity: 1;
-        transform: translate(0px, 0px);}
+
     
     .productClass{
         z-index: 0;
         transition: 1s ease;}
     
-    .itemBox:hover .productClass{
-        opacity: 0.3;}
-    
-    .itemBox:hover .buttonText{
-        opacity: 1;
-        font-weight: 400;}
-    
+
     .prodButton{
         transition: .5s ease;
         border: solid 1px;
@@ -60,4 +52,26 @@
     .productClass{
       width: inherit;
       height: inherit;
+    }
+
+    .shopLinkMobile{
+        width: inherit;
+        height: inherit;
+    }
+
+/* DESKTOP BELOW */
+    @media screen and (min-width: 761px) {
+
+
+        .itemBox:hover .whiteSquare{
+            opacity: 1;
+            transform: translate(0px, 0px);}
+            
+
+            .itemBox:hover .productClass{
+                opacity: 0.3;}
+            
+            .itemBox:hover .buttonText{
+                opacity: 1;
+                font-weight: 400;}
     }

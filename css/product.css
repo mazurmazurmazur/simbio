@@ -37,12 +37,7 @@
   }
   
   
-  .col-1-2{
-    width: 50%;
-    height: 100%;
-    float: left;
-  }
-  
+
   .product-image .bg{
     background-size: cover;
     background-position: center top;
@@ -201,3 +196,37 @@
     border: 1px solid gray;
     cursor: pointer;
   }
+  
+  
+  /* DESKTOP BELOW */
+  @media screen and (min-width: 761px) {
+    .col-1-2{
+      width: 50%;
+      height: 100%;
+      float: left;
+    }
+    
+
+  }
+
+  /* END DESKTOP */
+
+    /* MOBILE BELOW */
+    @media screen and (max-width: 760px) {
+      .col-1-2{
+        width: 100%;
+        text-align: center;
+      }
+
+      .product-info h2{
+        margin-bottom: 10px;
+      }
+
+      .dot{
+        width: 10px;
+        height: 10px;
+      }
+
+    }
+
+    /* END MOBILE */

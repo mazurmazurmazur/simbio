@@ -23,6 +23,7 @@ function getAllProducts() {
         let priceTag = clone.querySelector(".priceUnderTitle span");
         let titleTag = clone.querySelector(".productName");
         let detailsButton = clone.querySelector(".detailButton");
+        let linkImage = clone.querySelector(".shopLinkMobile");
   
         
          let photo = theProduct.acf.img1color1.sizes.medium_large;
@@ -34,6 +35,7 @@ function getAllProducts() {
             //   //Products.push(colours);
                image.setAttribute("src", photo);
                detailsButton.setAttribute("href", "product.html?id="+ dataId);
+               linkImage.setAttribute("href", "product.html?id="+ dataId);
            priceTag.innerHTML = price;
               titleTag.innerHTML = title;
   
