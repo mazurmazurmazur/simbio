@@ -216,3 +216,31 @@ border: solid 1px black;
   transform: translate3d(0, -100%, 0);
   opacity: 0;
 }
+
+
+
+    /* MOBILE */
+
+    @media screen and (max-width: 760px) {
+      
+      ._column{
+        border: none !important;
+      }
+      .product-name{
+        font-size: 20px;
+      }
+
+      .product-info{
+        padding:0;
+      }
+
+      p{
+        display: none;
+      }
+
+      .shopping-cart--list-item > ._column {
+        height: 80%;
+        width: 50%;
+    }
+      
+      }

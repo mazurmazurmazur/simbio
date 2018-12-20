@@ -37,7 +37,7 @@ padding: 5vh;
 
 }
 #floatedBelow{
-    margin-top: 15vh;
+    margin-top: 5vh;
     float: left;
     margin-right: 5vw;
     width: 50vw;
@@ -67,6 +67,7 @@ padding: 5vh;
     font-size: 15px;
     font-weight: 300;
     color:black;
+    float: right;
 }
 
 
@@ -155,7 +156,7 @@ padding: 5vh;
     line-height: 45px;
     font-size: 40px;
     font-weight: 500;
-    width: 120vw;
+    width: 80vw;
 }
 
 #container{
@@ -204,10 +205,8 @@ padding: 5vh;
 #toStoreButton{
    position: relative;
    margin: 0;
-   margin-right: 20vw;
    margin-top: 2vh;
    margin-bottom: 5vh;
-    float:right;
     border-bottom: dotted 1px black;
     line-height:15px;
     font-size: 15px;

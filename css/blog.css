@@ -55,3 +55,65 @@ transform: scaleX(-1);
 .articleLink:nth-child(even) p{
     right: -12vw;
 }
+
+    /* MOBILE */
+
+    @media screen and (max-width: 760px) {
+       
+
+        .blogPost{
+            width: 75vw;
+            height: auto;
+        }
+        
+        .blogPost:not(:hover){
+            opacity:1; 
+        }
+   
+        .articleLink{
+            cursor: pointer;
+        }
+        
+        .articleLink:nth-child(odd){
+            float:right;
+        }
+        .articleLink:nth-child(even){
+        float:left;
+        }
+        .articleLink:nth-child(even) img{
+        transform: scaleX(-1);
+        }
+        .blogPost img{
+            width: inherit;
+            height: inherit;
+        }
+        
+        #blogGallery{
+            position: absolute;
+            top: 20vh;
+        }
+        
+        .blogPost p {
+            font-size: 20px;
+            font-weight: 700;
+            z-index: 1;
+            position: absolute;
+            width: 30vw;
+            margin: auto;
+            top: 35%;
+            text-decoration: underline;
+            text-decoration-style: dotted;
+            color: black;
+            
+        }
+        
+        .articleLink:nth-child(odd) p{
+            left: -20vw;
+        }
+        
+        .articleLink:nth-child(even) p{
+            right: -15vw;
+        }
+
+
+        }

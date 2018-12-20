@@ -32,8 +32,19 @@
         width: 90%;
         max-height: 90%;
         font-size: 0.7vw;
-        transform: translate(0px, 30px);}
-    
+        transform: translate(0px, 30px);
+    }
+        
+        .under{
+            position: absolute;
+            text-align: center;
+            justify-content: center;
+            left:0;
+            right:0;
+        }
+    .under h3{
+        font-size: 1.3rem;
+    }
 
     
     .productClass{
@@ -48,6 +59,10 @@
         padding: 0.5vw;
         text-decoration: none;
         color: white;}
+        .prodButton:hover{
+            color:rgb(204, 199, 199);
+            text-decoration: none;
+        }
     
     .productClass{
       width: inherit;
@@ -73,5 +88,18 @@
             
             .itemBox:hover .buttonText{
                 opacity: 1;
-                font-weight: 400;}
+                font-weight: 400;
+            color: white;
+        border-color: white;
+    }
+    }
+
+
+    /* MOBILE */
+
+    @media screen and (max-width: 760px) {
+    .itemBox{
+        margin-bottom: 10vh;
+
+      }
     }
