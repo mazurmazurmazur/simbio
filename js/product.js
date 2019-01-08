@@ -20,41 +20,29 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 // Give the parameter a variable name
-var dynamicContent = getParameterByName('id');
-
-
-
-
-
-
+var dynamicContent = getParameterByName('id');    
+//getParameterByName is a function that fetches the id from URL
+//the id in URL comes from dynamically set "href" in blog.html through blog.js
+//the id set in this URL comes from fetched json file in blog.js
 
 function getAllProducts() {
 
-
-    fetch("http://mazurmazurmazur.pl/simbiocms/?rest_route=/wp/v2/product/"+dynamicContent)
+    fetch("http://mazurmazurmazur.pl/simbiocms/?rest_route=/wp/v2/product/"+dynamicContent) 
+    //only one entry in json file (WP REST)
+            
       .then(res => res.json())
-      .then(showProducts)
-      .then(afterFetch)
-      
-      
+      .then(showProducts) //filling DOM with json data
+      .then(afterFetch) 
   }
 
-
-
-
-  
-
-
   function showProducts(json) {
-    console.log(json.acf);
+        // console.log(json.acf);       //shows json file in console, makes development much easier
     let acf=json.acf;
 
     let colorPicker = document.querySelector(".select-color");
     let counter =0;
 
     for(key in acf){  ///looping through all keys in this product(acf= advanced custom fields)
-
-
         if(key.startsWith("color")){    ////filling the available colors from CMS
         let newDiv = document.createElement("div");
         newDiv.id=key;
@@ -63,35 +51,20 @@ function getAllProducts() {
         colorPicker.appendChild(newDiv);
         counter++;
         }
-
-
-
-
-
-       
     }
-     
-  
-  
-  
-    
-  
-  
         let image = document.querySelector(".product-image .bg");
-        let priceTag = document.querySelector(".price span");
+        let priceTag = document.querySelector(".price span");                //selecting DOM elements
         let titleTag = document.querySelector(".productName");
   
         
          let photo = json.acf.img1color1.sizes.medium_large;
-        let price = json.acf.price;
+        let price = json.acf.price;                                             //selecting JSON elements
         let title = json.title.rendered;
-        //  let dataId = json.id;
+       
   
       
-            //   //Products.push(colours);
                image.style.backgroundImage = "url("+photo+")";
-            //    detailsButton.setAttribute("href", "product.html?id="+ dataId);
-           priceTag.innerHTML = price;
+           priceTag.innerHTML = price;                      ///populating HTML with JSON content
               titleTag.innerHTML = title;
   
 

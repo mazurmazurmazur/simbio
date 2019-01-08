@@ -26,13 +26,20 @@ position: relative;
 
 #imagesAboutWrapper{
     position: absolute;
-    right: 15vw;
+    right: 10vw;
     top: 20vh;
 }
 
 .random{
     position: absolute;
     width: 12vw;
+}
+
+
+#aboutImageDesktop{
+        
+    width: 30vw;
+    opacity: 0.6;
 }
 
 /* MOBILE BELOW */
@@ -52,7 +59,7 @@ position: relative;
         top: 40vh;
     }
 
-    #aboutImage{
+    #aboutImageMobile{
         
         width: 50vw;
         opacity: 0.6;
