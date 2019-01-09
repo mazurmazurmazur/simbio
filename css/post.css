@@ -1,77 +1,69 @@
-body,html{
-    margin:0;
-    padding:0;
+body,
+html {
+  margin: 0;
+  padding: 0;
 }
 
-#postTitle{
-    line-height: 50px;
-    font-size: 50px;
-    font-weight: 500;
-    width: 22vw;
-    margin-bottom: 0;
+#postTitle {
+  line-height: 50px;
+  font-size: 50px;
+  font-weight: 500;
+  width: 22vw;
+  margin-bottom: 0;
 }
 
-#container{
-padding: 5vh;
-    margin-top: 15vh;
-    width: 100vw;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 40px;
-    color:black;
-     
-    
+#container {
+  padding: 5vh;
+  margin-top: 15vh;
+  width: 100vw;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 40px;
+  color: black;
 }
 
-#postText{
-    
- 
+#postText {
 }
-#floated{
-    float: left;
-    margin-right: 5vw;
-    width: 60vw;
-    height: 50vh;
-    overflow: hidden;
-    margin-top: 5vh;
-
+#floated {
+  float: left;
+  margin-right: 5vw;
+  width: 60vw;
+  height: 50vh;
+  overflow: hidden;
+  margin-top: 5vh;
 }
-#floatedBelow{
-    margin-top: 5vh;
-    float: left;
-    margin-right: 5vw;
-    width: 50vw;
-    height: 50vh;
-    overflow: hidden;
+#floatedBelow {
+  margin-top: 5vh;
+  float: left;
+  margin-right: 5vw;
+  width: 50vw;
+  height: 50vh;
+  overflow: hidden;
 }
 
-#floatedTitle{
-    margin-right: -5vw;
-    float: left;
-    width: 70vw;
-    height: auto;
-    
+#floatedTitle {
+  margin-right: -5vw;
+  float: left;
+  width: 70vw;
+  height: auto;
 }
 
-#floated img{
-    width: inherit;
+#floated img {
+  width: inherit;
 }
 
-#toStoreButton{
-   top:0;
-   right:0;
-    position: absolute;
-    margin-top: 3vh;
-    border-bottom: dotted 1px black;
-    line-height:15px;
-    font-size: 15px;
-    font-weight: 300;
-    color:black;
-    float: right;
+#toStoreButton {
+  top: 0;
+  right: 0;
+  position: absolute;
+  margin-top: 3vh;
+  border-bottom: dotted 1px black;
+  line-height: 15px;
+  font-size: 15px;
+  font-weight: 300;
+  color: black;
+  float: right;
 }
-
-
-
 
 /* GALLERY BELOW MAIN PHOTO */
 
@@ -83,83 +75,76 @@ padding: 5vh;
  * 1. Improve box model
  * 2. Enable fluid images
  */
- *,
- *:before,
- *:after {
-   box-sizing: border-box;
-   /* 1 */
- }
- 
- 
- img {
-   max-width: 100%;
-   /* 2 */
- }
- 
- /**
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  /* 1 */
+}
+
+img {
+  max-width: 100%;
+  /* 2 */
+}
+
+/**
   * Container Styles
   */
- .container {
-   max-width: 30em;
-   margin: 0 auto;
-   padding: 1em;
-   position: relative;
- }
- 
- /**
+.container {
+  max-width: 30em;
+  margin: 0 auto;
+  padding: 1em;
+  position: relative;
+}
+
+/**
   * Helper Styles
   */
- .ir {
-   text-indent: 100%;
-   white-space: nowrap;
-   overflow: hidden;
- }
- 
- /**
+.ir {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/**
   * Gallery Styles
   * 1. Enable fluid images
   */
- .gallery {
-   overflow: hidden;
- }
- 
- .gallery__thumbs {
-   text-align: center;
-   background: #fff;
- }
- .gallery__thumbs a {
-   display: inline-block;
-   width: 20%;
-   padding: 0.5em;
-   opacity: 0.75;
-   transition: opacity 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
- }
- .gallery__thumbs a:hover {
-   opacity: 1;
- }
- .gallery__thumbs a.is-active {
-   opacity: 0.2;
- }
+.gallery {
+  overflow: hidden;
+}
 
- 
+.gallery__thumbs {
+  text-align: center;
+  background: #fff;
+}
+.gallery__thumbs a {
+  display: inline-block;
+  width: 20%;
+  padding: 0.5em;
+  opacity: 0.75;
+  transition: opacity 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.gallery__thumbs a:hover {
+  opacity: 1;
+}
+.gallery__thumbs a.is-active {
+  opacity: 0.2;
+}
 
- /* END OF GALLERY BELOW MAIN PHOTO */
+/* END OF GALLERY BELOW MAIN PHOTO */
 
-
- /* MOBILE BELOW */
-
+/* MOBILE BELOW */
 
 @media screen and (max-width: 760px) {
-
-
-  #postTitle{
+  #postTitle {
     line-height: 45px;
     font-size: 40px;
     font-weight: 500;
     width: 80vw;
-}
+  }
 
-#container{
+  #container {
     padding: 0;
     margin: 0;
     margin-top: 20vh;
@@ -167,51 +152,47 @@ padding: 5vh;
     font-weight: 500;
     font-size: 18px;
     line-height: 40px;
-    color:black;
-     
-    
-}
-#postText{
-  padding: 10vw;
-}
+    color: black;
+  }
+  #postText {
+    padding: 10vw;
+  }
 
-#floated{
+  #floated {
     margin: 0;
-    padding:10vw;
+    padding: 10vw;
     width: 100vw;
     height: auto;
     overflow: hidden;
-    
-}
-#floatedBelow{
-    margin:0;
-    padding:0;
+  }
+  #floatedBelow {
+    margin: 0;
+    padding: 0;
     width: 100vw;
     height: auto;
     overflow: hidden;
-}
+  }
 
-#floatedTitle{
+  #floatedTitle {
     float: left;
     width: 100vw;
     height: auto;
     padding-left: 10vw;
-}
+  }
 
-#floated img{
+  #floated img {
     width: inherit;
-}
+  }
 
-#toStoreButton{
-   position: relative;
-   margin: 0;
-   margin-top: 2vh;
-   margin-bottom: 5vh;
+  #toStoreButton {
+    position: relative;
+    margin: 0;
+    margin-top: 2vh;
+    margin-bottom: 5vh;
     border-bottom: dotted 1px black;
-    line-height:15px;
+    line-height: 15px;
     font-size: 15px;
     font-weight: 300;
-    color:black;
-}
-
+    color: black;
+  }
 }

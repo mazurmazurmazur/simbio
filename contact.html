@@ -1,73 +1,135 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>SIMBIO</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" type="text/css" media="screen" href="css/home.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="css/contact.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="css/contact.css"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="js/home.js"></script>
     <script src="js/contact.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div id="bodyWrapper">
-        <div id="header">
-                <a id="logo" href="index.html"><img id="logoImg" src="images/logo.png"></a>
-                <a id="shoppingCart" href="#">
-                        <i class="fas fa-shopping-cart"></i><span class="noMobile">CART(<span class="totalInCart">0</span>)</span>
-                      </a>
-                <nav >
-                    <ul>
-                        <li><a id="blogButton"  href="blog.html">BLOG</a></li>
-                        <li><a id="aboutButton" href="about.html">ABOUT</a></li>
-                        <li><a id="shopButton" href="shop.html">SHOP</a></li>
-                        <li><a id="contactButton" class ="activeButton" href="contact.html">CONTACT</a></li>
-                      </ul>
-                    </nav>
-                    <div class= "underline80" ></div>
-            </div>
+      <div id="header">
+        <a id="logo" href="index.html"
+          ><img id="logoImg" src="images/logo.png"
+        /></a>
+        <a id="shoppingCart" href="#">
+          <i class="fas fa-shopping-cart"></i
+          ><span class="noMobile"
+            >CART(<span class="totalInCart">0</span>)</span
+          >
+        </a>
+        <nav>
+          <ul>
+            <li><a id="blogButton" href="blog.html">BLOG</a></li>
+            <li><a id="aboutButton" href="about.html">ABOUT</a></li>
+            <li><a id="shopButton" href="shop.html">SHOP</a></li>
+            <li>
+              <a id="contactButton" class="activeButton" href="contact.html"
+                >CONTACT</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="underline80"></div>
+      </div>
 
-            <div class="containerContact">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">                        
-                      <h2>Contact</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class=" formCore col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xs-offset-3">
-                        <form id="contact-form" class="form" method="post" action=""  role="form">
-                            <div class="form-group">
-                                <label class="form-label" for="name">Your Name</label>
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Your name" tabindex="1" required>
-                            </div>                            
-                            <div class="form-group">
-                                <label class="form-label" for="email">Your Email</label>
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" tabindex="2" required>
-                            </div>                            
-                            <div class="form-group">
-                                <label class="form-label" for="subject">Subject</label>
-                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" tabindex="3">
-                            </div>                            
-                            <div class="form-group">
-                                <label class="form-label" for="message">Message</label>
-                                <textarea rows="5" cols="50" name="message" class="form-control" id="message" placeholder="Message..." tabindex="4" required></textarea>                                 
-                            </div>
-                            <div class="text-center">
-                                <a href = "#" id="sendEmail" class="btn btn-start-order" >Send Message</a>
-                                <div><p id="sentEmail"></p></div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-              </div>
-
+      <div class="containerContact">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+            <h2>Contact</h2>
+          </div>
         </div>
-</body>
+        <div class="row">
+          <div
+            class=" formCore col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xs-offset-3"
+          >
+            <form
+              id="contact-form"
+              class="form"
+              method="post"
+              action=""
+              role="form"
+            >
+              <div class="form-group">
+                <label class="form-label" for="name">Your Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  placeholder="Your name"
+                  tabindex="1"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Your Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="Your Email"
+                  tabindex="2"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="subject">Subject</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="subject"
+                  name="subject"
+                  placeholder="Subject"
+                  tabindex="3"
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="message">Message</label>
+                <textarea
+                  rows="5"
+                  cols="50"
+                  name="message"
+                  class="form-control"
+                  id="message"
+                  placeholder="Message..."
+                  tabindex="4"
+                  required
+                ></textarea>
+              </div>
+              <div class="text-center">
+                <a href="#" id="sendEmail" class="btn btn-start-order"
+                  >Send Message</a
+                >
+                <div><p id="sentEmail"></p></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

@@ -1,323 +1,292 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
-
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900");
 
 body,
 html {
-    font-family: 'Roboto', sans-serif;
-    margin:0;
-    padding:0;
-    overflow-x: hidden;
-    min-height: 100vh;
-    height: 100%;
-    width: 100%;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
 }
 *:focus {
-    outline: none;
+  outline: none;
 }
 
-
-
-#bodyWrapper{
- height: 100%;
- overflow:auto;
-}
-
-#middleWrapper{
+#bodyWrapper {
   height: 100%;
-  overflow:auto;
+  overflow: auto;
+}
+
+#middleWrapper {
+  height: 100%;
+  overflow: auto;
   position: relative;
 }
 
-.middleNoFooter{
-    top: 20vh;
-    width: 100vw;
-    overflow:auto;
+.middleNoFooter {
+  top: 20vh;
+  width: 100vw;
+  overflow: auto;
 }
-
-
 
 /* HEADER */
 
-
-  #header{
-      top:0;
-      margin:auto;
-      position: fixed;
-      right:0;
-      left:0;
-      background-color: white;
-      z-index: 4;
-  }
-
-  #headerWrapper{
-      position: relative;
-  }
-
-  .activeButton{       /* marks on which subpage of the website are you */
-      text-decoration: underline
-    }
-
-  #logoImg{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 12vw;
-
-  }
-
-  nav{
-      text-align: center;
-      padding-top: 2vh;
-      white-space: nowrap;
-    
-  }
-
-
-
-  nav ul li{
-      display: inline-block;
-      text-align: center;
-      margin-left: 8vw;
-      margin-right: 8vw;
-      white-space: nowrap;
-      
-  }
-
-
-  nav ul li a{
-color: black;
-font-weight: 500;
-white-space: nowrap;
-padding-left: 0;
-  }
-
-  nav ul li a:hover{
-    color: gainsboro;
-    text-decoration: none;
+#header {
+  top: 0;
+  margin: auto;
+  position: fixed;
+  right: 0;
+  left: 0;
+  background-color: white;
+  z-index: 4;
 }
 
-#shoppingCart{
-    position:absolute;
-    right:1vw;
-    font-size: 1.5vw;
-    top:1vh;
-    color: black;
+#headerWrapper {
+  position: relative;
 }
 
-#shoppingCart span{
-    font-size: 1vw;
+.activeButton {
+  /* marks on which subpage of the website are you */
+  text-decoration: underline;
+}
+
+#logoImg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 12vw;
+}
+
+nav {
+  text-align: center;
+  padding-top: 2vh;
+  white-space: nowrap;
+}
+
+nav ul li {
+  display: inline-block;
+  text-align: center;
+  margin-left: 8vw;
+  margin-right: 8vw;
+  white-space: nowrap;
+}
+
+nav ul li a {
+  color: black;
+  font-weight: 500;
+  white-space: nowrap;
+  padding-left: 0;
+}
+
+nav ul li a:hover {
+  color: gainsboro;
+  text-decoration: none;
+}
+
+#shoppingCart {
+  position: absolute;
+  right: 1vw;
+  font-size: 1.5vw;
+  top: 1vh;
+  color: black;
+}
+
+#shoppingCart span {
+  font-size: 1vw;
 }
 
 /* END HEADER */
 
-
 /* CAROUSEL */
 
 .carousel-inner img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
-
-#carouselMain{
-    position: absolute;
-    top: 25vh;
-    left: 20vw;
-    width: 60vw;
-    max-height: 60vh;
+#carouselMain {
+  position: absolute;
+  top: 25vh;
+  left: 20vw;
+  width: 60vw;
+  max-height: 60vh;
 }
 
-.carousel-inner{
-    height: 60vh;
+.carousel-inner {
+  height: 60vh;
 }
-.carousel-indicators{
-    position: absolute;
-    bottom: 0;
-    right: 0vw;
+.carousel-indicators {
+  position: absolute;
+  top: 0;
+  right: 0vw;
 }
 
 .carousel-indicators li {
-    width: 10px;
-    height: 10px;
-    border-radius: 100%;
-    border: solid;
-    border-width: 1px;
-    border-color: white;
-    background-color: transparent;
-  }
-
-
-  /* END CAROUSEL */
-
-
-.underline80{
-    position: absolute;
-    left: 10vw;
-    width: 80vw;
-    border-bottom: solid 1px rgb(219, 219, 219);
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  border: solid;
+  border-width: 1px;
+  border-color: white;
+  background-color: transparent;
 }
 
+/* END CAROUSEL */
 
-
-
+.underline80 {
+  position: absolute;
+  left: 10vw;
+  width: 80vw;
+  border-bottom: solid 1px rgb(219, 219, 219);
+}
 
 /* FOOTER */
 
-#footer{
-    padding-top: 1vh;
-    position: absolute;
-    width: 100%;
-    height: 20vh;
-    background-color: rgba(220, 220, 220, 0.137);
-    bottom: -20vh;
+#footer {
+  padding-top: 1vh;
+  position: absolute;
+  width: 100%;
+  height: 20vh;
+  background-color: rgba(220, 220, 220, 0.137);
+  bottom: -20vh;
 }
 
-
-#newsletterWrapper{
-    color: gray;
-    position: absolute;
-    right: 1vw;
-    top: 3vh;
+#newsletterWrapper {
+  color: gray;
+  position: absolute;
+  right: 1vw;
+  top: 3vh;
 }
-#newsletterWrapper a, #newsletterWrapper input{
-    display: inline-block;
-}
-
-#newsletterWrapper a{
-color: gray;
-border: solid 1px gray;
-font-size: 10px;
+#newsletterWrapper a,
+#newsletterWrapper input {
+  display: inline-block;
 }
 
-#newsletterWrapper a:hover{
-    text-decoration: none;
+#newsletterWrapper a {
+  color: gray;
+  border: solid 1px gray;
+  font-size: 10px;
 }
 
-
-#newsletterWrapper a span:hover{
-background-color: white;
-color: rgba(0, 0, 0, 0.151);
+#newsletterWrapper a:hover {
+  text-decoration: none;
 }
 
-
-#newsletterWrapper input{
-    background-color: transparent;
-    border: none;
-    border-bottom: solid 1px gray;
-    
+#newsletterWrapper a span:hover {
+  background-color: white;
+  color: rgba(0, 0, 0, 0.151);
 }
 
-#result{
-    font-size: 12px;
-    color: gray;
+#newsletterWrapper input {
+  background-color: transparent;
+  border: none;
+  border-bottom: solid 1px gray;
 }
 
-
-.footerBlock{
-    margin-top:2vh;
-    display: inline-block;
-    color: gray;
-    margin-left: 10vw;
+#result {
+  font-size: 12px;
+  color: gray;
 }
 
-.footerBlock p{
-color: black;
-}
-.footerBlock a{
-    display:block;
-    color: gray;
+.footerBlock {
+  margin-top: 2vh;
+  display: inline-block;
+  color: gray;
+  margin-left: 10vw;
 }
 
+.footerBlock p {
+  color: black;
+}
+.footerBlock a {
+  display: block;
+  color: gray;
+}
 
 /* END FOOTER */
 
-
 /* MOBILE BELOW */
 
-
 @media screen and (max-width: 760px) {
+  .noMobile {
+    display: none !important;
+  }
 
-    .noMobile{
-      display:none !important;
-    }
+  #logoImg {
+    width: 35vw;
+    margin-bottom: 2vh;
+  }
+  #shoppingCart,
+  #shoppingCart span {
+    font-size: 4vw;
+  }
 
-    #logoImg{
-        width: 35vw;
-        margin-bottom: 2vh;
-    }
-    #shoppingCart, #shoppingCart span{
-        font-size: 4vw;
-    }
+  nav {
+    font-size: 2.5vw;
+  }
+  nav ul {
+    padding: 0;
+  }
 
+  .carousel-indicators {
+    top: 0;
+    right: 0 !important;
+    padding: 0;
+    margin: 0;
+    justify-content: inherit;
+  }
 
+  .carousel-inner {
+    height: 40vh;
+  }
 
-    nav{
-        font-size: 2.5vw;
-    }
-    nav ul{
-        padding:0;
-    }
+  #footer {
+    bottom: -70vh;
+    height: 70vh;
+    text-align: center;
+  }
 
-    .carousel-indicators{
-        top:0;
-        right:0 !important;
-        padding:0;
-        margin: 0;
-        justify-content: inherit;
-    }
+  #footer div {
+    position: static;
+    display: block;
+    margin: 0;
+    margin-bottom: 5vh;
+  }
 
-    .carousel-inner{
-        height: 40vh;
-    }
+  #footerUnderline {
+    margin-left: 10vw !important;
+  }
+  #newsletterWrapper {
+    justify-content: center;
+    text-align: center;
+  }
 
-    #footer{
-        bottom:-70vh;
-        height: 70vh;
-        text-align: center; 
-    }
-
-    #footer div{
-        position: static;
-        display: block;
-        margin:0;
-        margin-bottom: 5vh;
-        
-    }
-
-    #footerUnderline{
-        margin-left: 10vw !important;
-    }
-    #newsletterWrapper{
-        justify-content: center;
-        text-align: center;
-    }
-
-    #newsletterWrapper a, #newsletterWrapper input, #newsletterWrapper p{
-        display: block;
-        margin: auto;
-        text-align: center;
-    }
-    #newsletterWrapper a{
-        margin-top: 1vh;
-        border:none;
-    }
-    #newsletterWrapper a span{
-        font-size: 4vw;
-        margin-top: 1vh;
-        border:solid 1px gray;
-    }
-
-
-
+  #newsletterWrapper a,
+  #newsletterWrapper input,
+  #newsletterWrapper p {
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+  #newsletterWrapper a {
+    margin-top: 1vh;
+    border: none;
+  }
+  #newsletterWrapper a span {
+    font-size: 4vw;
+    margin-top: 1vh;
+    border: solid 1px gray;
+  }
 }
 
 /* ONLY DESKTOP BELOW */
 
 @media screen and (min-width: 761px) {
-    .noDesktop{
-        display:none;
-    }
-    
-    }
-    
-    /* END OF ONLY DESKTOP */
+  .noDesktop {
+    display: none;
+  }
+}
+
+/* END OF ONLY DESKTOP */

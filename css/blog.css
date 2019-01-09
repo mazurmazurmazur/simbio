@@ -1,119 +1,113 @@
-.blogPost{
-    width: 50vw;
-    height: 40vh;
-    margin: 3vw;
-    position: relative;
-    transition: 0.5s ease-in-out;
-    cursor: pointer;
+.blogPost {
+  width: 50vw;
+  height: 40vh;
+  margin: 3vw;
+  position: relative;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
 }
 
-.blogPost:hover{
-opacity: 0.7;
+.blogPost:hover {
+  opacity: 0.7;
 }
 
-.articleLink{
-    cursor: pointer;
+.articleLink {
+  cursor: pointer;
 }
 
-.articleLink:nth-child(odd){
-    float:right;
+.articleLink:nth-child(odd) {
+  float: right;
 }
-.articleLink:nth-child(even){
-float:left;
+.articleLink:nth-child(even) {
+  float: left;
 }
-.articleLink:nth-child(even) img{
-transform: scaleX(-1);
+.articleLink:nth-child(even) img {
+  transform: scaleX(-1);
 }
-.blogPost img{
-    width: inherit;
-    height: inherit;
+.blogPost img {
+  width: inherit;
+  height: inherit;
 }
 
-#blogGallery{
-    position: absolute;
-    top: 20vh;
+#blogGallery {
+  position: absolute;
+  top: 20vh;
 }
 
 .blogPost p {
-    font-size: 40px;
+  font-size: 40px;
+  font-weight: 700;
+  z-index: 1;
+  position: absolute;
+  width: 20vw;
+  margin: auto;
+  top: 35%;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  color: black;
+}
+
+.articleLink:nth-child(odd) p {
+  left: -8vw;
+}
+
+.articleLink:nth-child(even) p {
+  right: -12vw;
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 760px) {
+  .blogPost {
+    width: 75vw;
+    height: auto;
+  }
+
+  .blogPost:not(:hover) {
+    opacity: 1;
+  }
+
+  .articleLink {
+    cursor: pointer;
+  }
+
+  .articleLink:nth-child(odd) {
+    float: right;
+  }
+  .articleLink:nth-child(even) {
+    float: left;
+  }
+  .articleLink:nth-child(even) img {
+    transform: scaleX(-1);
+  }
+  .blogPost img {
+    width: inherit;
+    height: inherit;
+  }
+
+  #blogGallery {
+    position: absolute;
+    top: 20vh;
+  }
+
+  .blogPost p {
+    font-size: 20px;
     font-weight: 700;
     z-index: 1;
     position: absolute;
-    width: 20vw;
+    width: 30vw;
     margin: auto;
     top: 35%;
     text-decoration: underline;
     text-decoration-style: dotted;
     color: black;
-    
+  }
+
+  .articleLink:nth-child(odd) p {
+    left: -20vw;
+  }
+
+  .articleLink:nth-child(even) p {
+    right: -15vw;
+  }
 }
-
-.articleLink:nth-child(odd) p{
-    left: -8vw;
-}
-
-.articleLink:nth-child(even) p{
-    right: -12vw;
-}
-
-    /* MOBILE */
-
-    @media screen and (max-width: 760px) {
-       
-
-        .blogPost{
-            width: 75vw;
-            height: auto;
-        }
-        
-        .blogPost:not(:hover){
-            opacity:1; 
-        }
-   
-        .articleLink{
-            cursor: pointer;
-        }
-        
-        .articleLink:nth-child(odd){
-            float:right;
-        }
-        .articleLink:nth-child(even){
-        float:left;
-        }
-        .articleLink:nth-child(even) img{
-        transform: scaleX(-1);
-        }
-        .blogPost img{
-            width: inherit;
-            height: inherit;
-        }
-        
-        #blogGallery{
-            position: absolute;
-            top: 20vh;
-        }
-        
-        .blogPost p {
-            font-size: 20px;
-            font-weight: 700;
-            z-index: 1;
-            position: absolute;
-            width: 30vw;
-            margin: auto;
-            top: 35%;
-            text-decoration: underline;
-            text-decoration-style: dotted;
-            color: black;
-            
-        }
-        
-        .articleLink:nth-child(odd) p{
-            left: -20vw;
-        }
-        
-        .articleLink:nth-child(even) p{
-            right: -15vw;
-        }
-
-
-        }

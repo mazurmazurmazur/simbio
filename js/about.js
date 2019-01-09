@@ -1,21 +1,24 @@
+function fetchAbout() {
+  fetch(
+    "http://mazurmazurmazur.pl/simbiocms/?rest_route=/wp/v2/aboutsection/200"
+  ) //only one entry in json file (WP REST)
+    .then(res => res.json())
+    .then(showAbout);
+}
+function showAbout(json) {
+  console.log(json); //shows json file in console, makes development much easier
+  let acf = json.acf;
 
+  let imageDesktop = document.getElementById("aboutImageDesktop"); //selecting DOM elements
+  let imageMobile = document.getElementById("aboutImageMobile");
+  let aboutText = document.getElementById("textAbout");
 
+  let jsonText = acf.abouttext;
+  let image = acf.image.sizes.medium_large;
 
+  imageDesktop.setAttribute("src", image);
+  imageMobile.setAttribute("src", image);
+  aboutText.innerHTML = jsonText;
+}
 
-$(document).ready(function() {              //////function randomizing positions of pictures in about page
-    let imagesDiv = document.getElementById("imagesAbout")
-    // let bodyWidth = document.body.offsetWidth;
-    // let divWidth = imagesDiv.offsetWidth;
-    // let divHeight = imagesDiv.offsetHeight;
-    // let divFromTop = imagesDiv.offsetTop;
-    // let divFromLeft = imagesDiv.offsetLeft;
-
-  
-    // $('.random').each(function(idx, img) {
-    //   let randPosX = Math.floor(Math.random() * divWidth);
-    //   let randPosY = Math.floor(Math.random() * divHeight);
-    //   $(img).css('left', randPosX);
-    //   $(img).css('top', randPosY);
-  
-    // });
-  });
+fetchAbout();
